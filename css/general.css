@@ -87,6 +87,21 @@ button {
   text-decoration: none;
 }
 
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--brand-color);
+}
+
+.header-span {
+  color: var(--dark);
+}
+
 .order {
   background-color: var(--dark);
   background-image: linear-gradient(var(--hero-background), var(--hero-background)),
@@ -373,10 +388,6 @@ button {
   padding: 100px 0;
 }
 
-.logo-container {
-  margin-right: 120px;
-}
-
 .footer-span {
   color: var(--light);
 }
@@ -390,7 +401,89 @@ button {
   max-width: 264px;
 }
 
+.social-footer {
+  display: flex;
+  gap: 16px;
+}
+
+.social-text {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.social-footer-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-footer-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brand-color);
+  color: var(--light);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-footer-link:hover,
+.social-footer-link:focus {
+  background-color: var(--success);
+}
+
+.social-footer-icon {
+  fill: currentColor;
+}
+
+.footer-input-email {
+  padding: 8px 16px;
+  margin-top: 16px;
+  background-color: transparent;
+  color: var(--white-background);
+  border: 1px solid var(--white-background);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.footer-input-email::placeholder {
+  min-height: 264px;
+  color: var(--white-background);
+  font-size: 12px;
+  line-height: 2;
+}
+
+.footer-send-btn {
+  padding: 8px 24px;
+  min-width: 165px;
+  background-color: var(--brand-color);
+  color: var(--white-background);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-send-btn:hover,
+.footer-send-btn:focus {
+  background-color: var(--pressed-state);
+}
+
 @media screen and (max-width: 767px) {
+  .container {
+    max-width: 396px;
+  }
+
   .icon-background {
     display: none;
   }
@@ -410,6 +503,43 @@ button {
 
   .team-member:not(:last-child) {
     margin-bottom: 72px;
+  }
+
+  .logo-container {
+    margin-bottom: 72px;
+  }
+
+  .footer {
+    display: block;
+    text-align: center;
+  }
+  .footer-text {
+    margin: 0 auto;
+  }
+
+  .social-container {
+    margin-bottom: 72px;
+  }
+
+  .social-text {
+    text-align: center;
+  }
+
+  .social-footer {
+    justify-content: center;
+  }
+
+  .footer-send-text {
+    text-align: center;
+  }
+
+  .footer-input-email {
+    min-width: 398px;
+    margin-bottom: 16px;
+  }
+
+  .footer-send-btn {
+    margin: 0 auto;
   }
 }
 

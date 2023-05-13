@@ -682,13 +682,10 @@ label {
 }
 
 .footer-input-email::placeholder {
-  min-height: 264px;
   color: var(--white-background);
   font-size: 12px;
   line-height: 2;
 }
-
-/* Order form */
 
 .footer-send-btn {
   padding: 8px 24px;
@@ -715,6 +712,7 @@ label {
   background-color: var(--pressed-state);
 }
 
+/* Order form */
 .modal-window-title {
   margin-bottom: 16px;
   font-weight: 500;
