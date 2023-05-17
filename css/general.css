@@ -104,6 +104,13 @@ body.modal-open {
   text-align: center;
 }
 
+.site-header {
+  border-bottom: solid 1px var(--accent);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+  /*justify-content: space-between;*/
+}
+
 /* Logo style */
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -698,6 +705,59 @@ body.modal-open {
   background-color: var(--pressed-state);
 }
 
+/* Portfolio page style */
+.filters {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 72px;
+}
+
+.filter-button {
+  background-color: var(--light);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--brand-color);
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--pressed-state);
+  color: var(--white-background);
+  border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.bordered {
+  background: var(--white-background);
+  border: 1px solid var(--light);
+  border-top: none;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  padding-left: 16px;
+}
+
+.project-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.project-name {
+  color: var(--text);
+}
+
 @media screen and (max-width: 767px) {
   .container {
     max-width: 428px;
@@ -737,7 +797,6 @@ body.modal-open {
   }
 
   .team-member {
-    width: 264px;
     margin: 0 auto;
   }
 
@@ -791,13 +850,6 @@ body.modal-open {
 
   .container {
     width: 768px;
-  }
-
-  .site-header {
-    border-bottom: solid 1px var(--accent);
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-      0px 1px 6px rgba(46, 47, 66, 0.08);
-    /*justify-content: space-between;*/
   }
 
   .site-header > .container {
@@ -908,6 +960,10 @@ body.modal-open {
   }
 
   .icon-background {
+    display: none;
+  }
+
+  .project-overlay {
     display: none;
   }
 }
