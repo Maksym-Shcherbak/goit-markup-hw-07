@@ -709,9 +709,6 @@ body.modal-open {
 .filters {
   display: flex;
   gap: 24px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-bottom: 72px;
 }
 
 .filter-button {
@@ -738,11 +735,15 @@ body.modal-open {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.project {
+  transition: 0.5s all;
+}
+
+.project-active {
+  display: block;
+}
+
 .bordered {
-  background: var(--white-background);
-  border: 1px solid var(--light);
-  border-top: none;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   padding-left: 16px;
 }
 
@@ -756,6 +757,33 @@ body.modal-open {
 
 .project-name {
   color: var(--text);
+}
+
+/*класи для анімації фільтру*/
+.anime {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.hide {
+  animation-name: hide;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+  0% {
+    visibility: visible;
+    height: auto;
+  }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    max-width: 0;
+    font-size: 0;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -840,6 +868,16 @@ body.modal-open {
 
   .footer-send-btn {
     margin: 0 auto;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 48px;
+  }
+
+  .our-projects {
+    padding: 48px 0;
   }
 }
 
@@ -952,6 +990,17 @@ body.modal-open {
   .footer-input-email {
     min-width: 264px;
   }
+
+  .filters {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
 }
 
 @media screen and (max-width: 1439px) {
@@ -966,11 +1015,49 @@ body.modal-open {
   .project-overlay {
     display: none;
   }
+
+  .project-active {
+    background: var(--white-background);
+    border: 1px solid var(--light);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  }
+
+  .project:not(:last-child) {
+    margin-bottom: 48px;
+  }
+
+  .project-active:hover,
+  .project-active:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+
+  .project-thumb {
+    max-width: 396px;
+    height: 300px;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .footer-content {
     padding-left: 108px;
+  }
+
+  .our-projects {
+    padding-top: 64px;
+  }
+
+  .filters {
+    margin-bottom: 64px;
+  }
+
+  .project {
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
 
@@ -1061,5 +1148,53 @@ body.modal-open {
 
   .footer-send-form {
     margin-left: auto;
+  }
+
+  .our-projects {
+    padding-top: 100px;
+  }
+
+  .filters {
+    margin-bottom: 72px;
+  }
+
+  .projects {
+    gap: 48px 24px;
+  }
+
+  .project {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+
+  .bordered {
+    border: 1px solid var(--accent);
+    border-top: none;
+    padding-left: 16px;
+  }
+
+  .project-thumb {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-overlay {
+    background-color: var(--brand-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    padding: 40px 32px;
+
+    transform: translatey(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .project-active:hover .project-overlay {
+    transform: translatey(0);
+  }
+
+  .project-overlay-text {
+    color: var(--light);
   }
 }

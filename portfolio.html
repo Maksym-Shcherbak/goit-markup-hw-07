@@ -78,28 +78,28 @@
           </address>
           <ul class="social-list__mobile list">
             <li class="social-item__mobile">
-              <a href="" class="social-link__mobile">
+              <a href="https://instagram.com" class="social-link__mobile">
                 <svg class="social-icon__mobile" width="24" height="24">
                   <use href="./images/icons.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item__mobile">
-              <a href="" class="social-link__mobile">
+              <a href="https://twitter.com" class="social-link__mobile">
                 <svg class="social-icon__mobile" width="24" height="24">
                   <use href="./images/icons.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item__mobile">
-              <a href="" class="social-link__mobile">
+              <a href="https://facebook.com" class="social-link__mobile">
                 <svg class="social-icon__mobile" width="24" height="24">
                   <use href="./images/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item__mobile">
-              <a href="" class="social-link__mobile">
+              <a href="https://linkedin.com" class="social-link__mobile">
                 <svg class="social-icon__mobile" width="24" height="24">
                   <use href="./images/icons.svg#linkedin"></use>
                 </svg>
@@ -120,23 +120,24 @@
           <h1 class="visually-hidden">Portfolio</h1>
           <ul class="filters list">
             <li class="filter">
-              <button type="button" class="filter-button">All</button>
+              <button type="button" class="filter-button" data-filter="all">All</button>
             </li>
             <li class="filter">
-              <button type="button" class="filter-button">Web Site</button>
+              <button type="button" class="filter-button" data-filter="web">Web Site</button>
             </li>
             <li class="filter">
-              <button type="button" class="filter-button">App</button>
+              <button type="button" class="filter-button"
+              data-filter="app">App</button>
             </li>
             <li class="filter">
-              <button type="button" class="filter-button">Design</button>
+              <button type="button" class="filter-button" data-filter="design">Design</button>
             </li>
             <li class="filter">
-              <button type="button" class="filter-button">Marketing</button>
+              <button type="button" class="filter-button" data-filter="marketing">Marketing</button>
             </li>
           </ul>
           <ul class="projects list">
-            <li class="project">
+            <li class="project app">
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
@@ -158,7 +159,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project marketing">
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
@@ -180,7 +181,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project app">
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
@@ -202,7 +203,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project marketing">
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
@@ -224,7 +225,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project design">
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
@@ -246,7 +247,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project marketing">
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
@@ -268,7 +269,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project design">
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
@@ -290,7 +291,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project web">
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
@@ -312,7 +313,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project web">
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
@@ -403,5 +404,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/filter.js"></script>
   </body>
 </html>
