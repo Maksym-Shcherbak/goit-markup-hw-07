@@ -49,7 +49,7 @@
             </li>
           </ul>
         </address>
-      <button type="button" class="open-menu js-open-menu" aria-expanded="false">
+        <button type="button" class="open-menu js-open-menu" aria-expanded="false">
           <svg class="open-menu-icon" width="32" height="22">
             <use href="./images/icons.svg#menu"></use>
           </svg>
@@ -72,8 +72,16 @@
           </nav>
           <address class="mobile-address">
             <ul class="contacts-list__mobile list">
-              <li class="contacts-item__mobile"><a class="contacts-link__mobile link" href="tel:+110001111111"">+11 (000) 111-11-11</a></li>
-              <li class="contacts-item__mobile"><a class="contacts-link__mobile link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+              <li class="contacts-item__mobile">
+                <a class="contacts-link__mobile link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="contacts-item__mobile">
+                <a class="contacts-link__mobile link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
             </ul>
           </address>
           <ul class="social-list__mobile list">
@@ -108,8 +116,8 @@
           </ul>
           <button type="button" class="mobile-menu-close js-close-menu">
             <svg class="icon-close__mobile" width="8" height="8">
-                <use href="./images/icons.svg#close"></use>
-              </svg>
+              <use href="./images/icons.svg#close"></use>
+            </svg>
           </button>
         </div>
       </div>
@@ -126,8 +134,7 @@
               <button type="button" class="filter-button" data-filter="web">Web Site</button>
             </li>
             <li class="filter">
-              <button type="button" class="filter-button"
-              data-filter="app">App</button>
+              <button type="button" class="filter-button" data-filter="app">App</button>
             </li>
             <li class="filter">
               <button type="button" class="filter-button" data-filter="design">Design</button>
@@ -141,6 +148,7 @@
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
+                    srcset="./images/project1.jpg 1x, ./images/project1@2x.jpg 2x"
                     src="./images/project1.jpg"
                     alt="violet iterface bankig app"
                     class="project-image"
@@ -163,6 +171,7 @@
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
+                    srcset="./images/project2.jpg 1x, ./images/project2@2x.jpg 2x"
                     src="./images/project2.jpg"
                     alt="qr code scanner on smartphone"
                     class="project-image"
@@ -185,6 +194,7 @@
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
+                    srcset="./images/project3.jpg 1x, ./images/project3@2x.jpg 2x"
                     src="./images/project3.jpg"
                     alt="smartphone and laptop with an inscription on the screen Return to normalcy"
                     class="project-image"
@@ -207,6 +217,7 @@
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
+                    srcset="./images/project4.jpg 1x, ./images/project4@2x.jpg 2x"
                     src="./images/project4.jpg"
                     alt="a man driving a car with a navigator on his smartphone"
                     class="project-image"
@@ -229,6 +240,7 @@
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
+                    srcset="./images/project5.jpg 1x, ./images/project5@2x.jpg 2x"
                     src="./images/project5.jpg"
                     alt="space theme on your smartphone"
                     class="project-image"
@@ -251,6 +263,7 @@
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
+                    srcset="./images/project6.jpg 1x, ./images/project6@2x.jpg 2x"
                     src="./images/project6.jpg"
                     alt="a woman wearing headphones listening to something on her smartphone"
                     class="project-image"
@@ -273,6 +286,7 @@
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
+                    srcset="./images/project7.jpg 1x, ./images/project7@2x.jpg 2x"
                     src="./images/project7.jpg"
                     alt="remote machine control"
                     class="project-image"
@@ -295,6 +309,7 @@
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
+                    srcset="./images/project8.jpg 1x, ./images/project8@2x.jpg 2x"
                     src="./images/project8.jpg"
                     alt="woman with fruit in her bag"
                     class="project-image"
@@ -317,6 +332,7 @@
               <a class="project-active link" href="">
                 <div class="project-thumb">
                   <img
+                    srcset="./images/project9.jpg 1x, ./images/project9@2x.jpg 2x"
                     src="./images/project9.jpg"
                     alt="barista makes coffee"
                     class="project-image"
@@ -384,10 +400,12 @@
           </ul>
         </div>
         <form action="javascript:void(0);" class="footer-send-form">
-          <label class="footer-send">
+          <div class="footer-input-container">
             <p class="footer-send-text">Subcribe</p>
-            <input type="email" name="email" placeholder="E-mail" class="footer-input-email" />
-          </label>
+            <label class="footer-send">
+              <input type="email" name="email" placeholder="E-mail" class="footer-input-email" />
+            </label>
+          </div>
           <button type="submit" class="footer-send-btn">
             Subcribe
             <svg class="footer-send-icon" width="24" height="24">
@@ -397,7 +415,7 @@
         </form>
       </div>
     </footer>
-     <script
+    <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="

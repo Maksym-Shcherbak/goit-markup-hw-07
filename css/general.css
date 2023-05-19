@@ -264,6 +264,13 @@ body.modal-open {
   padding: 112px 0;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .order {
+    background-image: linear-gradient(var(--hero-background), var(--hero-background)),
+      url('../images/people-office@2x.jpg');
+  }
+}
+
 .order-title {
   max-width: 320px;
   font-weight: 700;
@@ -801,6 +808,12 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  .project-thumb {
+    height: 280px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .container {
     max-width: 428px;
@@ -902,7 +915,7 @@ body.modal-open {
     justify-content: flex-start;
     margin-bottom: 48px;
     row-gap: 16px;
-    max-width: 268px;
+    max-width: 270px;
   }
 
   .filter-button {
@@ -911,9 +924,6 @@ body.modal-open {
 
   .our-projects {
     padding: 48px 0;
-  }
-  .project-thumb {
-    height: 280px;
   }
 
   .project:not(:last-child) {
@@ -1043,7 +1053,7 @@ body.modal-open {
   }
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1158px) {
   .container {
     padding: 0 16px;
   }
@@ -1086,7 +1096,7 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) and (max-width: 1158px) {
   .footer-content {
     gap: 72px 24px;
     align-items: flex-start;
@@ -1110,7 +1120,7 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   .container {
     width: 1158px;
   }

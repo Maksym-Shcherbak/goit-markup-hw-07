@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/general.css" />
-    
+
     <title>Studio</title>
   </head>
   <body>
@@ -73,8 +73,16 @@
           </nav>
           <address class="mobile-address">
             <ul class="contacts-list__mobile list">
-              <li class="contacts-item__mobile"><a class="contacts-link__mobile link" href="tel:+110001111111"">+11 (000) 111-11-11</a></li>
-              <li class="contacts-item__mobile"><a class="contacts-link__mobile link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+              <li class="contacts-item__mobile">
+                <a class="contacts-link__mobile link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="contacts-item__mobile">
+                <a class="contacts-link__mobile link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
             </ul>
           </address>
           <ul class="social-list__mobile list">
@@ -109,8 +117,8 @@
           </ul>
           <button type="button" class="mobile-menu-close js-close-menu">
             <svg class="icon-close__mobile" width="8" height="8">
-                <use href="./images/icons.svg#close"></use>
-              </svg>
+              <use href="./images/icons.svg#close"></use>
+            </svg>
           </button>
         </div>
       </div>
@@ -120,59 +128,6 @@
         <div class="container">
           <h1 class="order-title">Effective Solutions for Your Business</h1>
           <button class="order-button" type="button" data-modal-open>Order Service</button>
-        </div>
-        <div class="modal is-hidden" data-modal>
-          <div class="modal-window">
-            <p class="modal-window-title">Leave your contacts and we will call you back</p>
-            <form action="javascript:void(0);" class="order-form">
-              <label class="order-name label">
-                Name
-                <input type="text" name="name" class="order-input-name input" autofocus />
-                <span class="icon-name span-modal"
-                  ><svg class="icon-modal" width="18" height="18">
-                    <use href="./images/icons.svg#person"></use></svg></span
-              ></label>
-              <label class="oreder-phone label">
-                Phone
-                <input type="tel" name="phone_number" class="order-input-phone input" /><span
-                  class="icon-phone span-modal"
-                  ><svg class="icon-modal" width="24" height="24">
-                    <use href="./images/icons.svg#phone"></use></svg></span
-              ></label>
-              <label class="order-mail label">
-                Email
-                <input type="email" name="email" class="order-input-email input" /><span
-                  class="icon-mail span-modal"
-                  ><svg class="icon-modal" width="24" height="24">
-                    <use href="./images/icons.svg#email"></use></svg></span
-              ></label>
-              <label class="order-comment label">
-                Comment
-                <textarea
-                  name="comment"
-                  class="order-input-comment input"
-                  rows="6"
-                  placeholder="Text input"
-                ></textarea>
-              </label>
-              <label class="order-check">
-                <input
-                  type="checkbox"
-                  name="accept"
-                  value="done"
-                  class="order-input-accept visually-hidden"
-                />
-                <span class="icon-check"></span>
-                I accept the terms and conditions of the &nbsp;<a href="#">Privacy Policy</a>
-              </label>
-              <button type="submit" class="order-form-btn">Send</button>
-            </form>
-            <button class="modal-window-btn" type="button" data-modal-close>
-              <svg class="order-close" width="8" height="8">
-                <use href="./images/icons.svg#close"></use>
-              </svg>
-            </button>
-          </div>
         </div>
       </section>
       <section class="our-feautures section">
@@ -236,6 +191,7 @@
           <ul class="jobs list">
             <li class="job">
               <img
+                srcset="./images/job1.jpg 1x, ./images/job1@2x.jpg 2x"
                 src="./images/job1.jpg"
                 alt="monoblock on which the site is open"
                 class="job-img"
@@ -244,6 +200,7 @@
             </li>
             <li class="job">
               <img
+                srcset="./images/job2.jpg 1x, ./images/job2@2x.jpg 2x"
                 src="./images/job2.jpg"
                 alt="messenger on smartphone"
                 class="job-img"
@@ -252,6 +209,7 @@
             </li>
             <li class="job">
               <img
+                srcset="./images/job3.jpg 1x, ./images/job3@2x.jpg 2x"
                 src="./images/job3.jpg"
                 alt="Laptop and smartphone in hand"
                 class="job-img"
@@ -267,6 +225,7 @@
           <ul class="all-team list">
             <li class="team-member">
               <img
+                srcset="./images/team1.jpg 1x, ./images/team1@2x.jpg 2x"
                 src="./images/team1.jpg"
                 alt="smiling man in a blue shirt"
                 class="team-member-photo"
@@ -309,6 +268,7 @@
             </li>
             <li class="team-member">
               <img
+                srcset="./images/team2.jpg 1x, ./images/team2@2x.jpg 2x"
                 src="./images/team2.jpg"
                 alt="girl with dark long hair in a pink sweater"
                 class="team-member-photo"
@@ -351,6 +311,7 @@
             </li>
             <li class="team-member">
               <img
+                srcset="./images/team3.jpg 1x, ./images/team3@2x.jpg 2x"
                 src="./images/team3.jpg"
                 alt="A man with dark hair and a gray T-shirt"
                 class="team-member-photo"
@@ -393,6 +354,7 @@
             </li>
             <li class="team-member">
               <img
+                srcset="./images/team4.jpg 1x, ./images/team4@2x.jpg 2x"
                 src="./images/team4.jpg"
                 alt="A man with dark hair and a beard in a blue shirt"
                 class="team-member-photo"
@@ -531,10 +493,12 @@
           </ul>
         </div>
         <form action="javascript:void(0);" class="footer-send-form">
-          <label class="footer-send">
+          <div class="footer-input-container">
             <p class="footer-send-text">Subcribe</p>
-            <input type="email" name="email" placeholder="E-mail" class="footer-input-email" />
-          </label>
+            <label class="footer-send">
+              <input type="email" name="email" placeholder="E-mail" class="footer-input-email" />
+            </label>
+          </div>
           <button type="submit" class="footer-send-btn">
             Subcribe
             <svg class="footer-send-icon" width="24" height="24">
@@ -544,6 +508,59 @@
         </form>
       </div>
     </footer>
+    <div class="modal is-hidden" data-modal>
+      <div class="modal-window">
+        <p class="modal-window-title">Leave your contacts and we will call you back</p>
+        <form action="javascript:void(0);" class="order-form">
+          <label class="order-name label">
+            Name
+            <input type="text" name="name" class="order-input-name input" autofocus />
+            <span class="icon-name span-modal"
+              ><svg class="icon-modal" width="18" height="18">
+                <use href="./images/icons.svg#person"></use></svg></span
+          ></label>
+          <label class="oreder-phone label">
+            Phone
+            <input type="tel" name="phone_number" class="order-input-phone input" /><span
+              class="icon-phone span-modal"
+              ><svg class="icon-modal" width="24" height="24">
+                <use href="./images/icons.svg#phone"></use></svg></span
+          ></label>
+          <label class="order-mail label">
+            Email
+            <input type="email" name="email" class="order-input-email input" /><span
+              class="icon-mail span-modal"
+              ><svg class="icon-modal" width="24" height="24">
+                <use href="./images/icons.svg#email"></use></svg></span
+          ></label>
+          <label class="order-comment label">
+            Comment
+            <textarea
+              name="comment"
+              class="order-input-comment input"
+              rows="6"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+          <label class="order-check">
+            <input
+              type="checkbox"
+              name="accept"
+              value="done"
+              class="order-input-accept visually-hidden"
+            />
+            <span class="icon-check"></span>
+            I accept the terms and conditions of the &nbsp;<a href="#">Privacy Policy</a>
+          </label>
+          <button type="submit" class="order-form-btn">Send</button>
+        </form>
+        <button class="modal-window-btn" type="button" data-modal-close>
+          <svg class="order-close" width="8" height="8">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
